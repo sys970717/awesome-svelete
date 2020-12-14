@@ -1,11 +1,20 @@
 <script>
-	export let name;
+	import Fruits from './Frutis.svelte';
+	import Parent from './Parent.svelte';
+	import { storeName } from './store/store.js';
+	let name = 'WORLD';
+	storeName.set(name);
+	let fruits = ['Apple', 'Banana', 'Cherry', 'Mango', 'Orange'];
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<Fruits {fruits}/>
+	<Fruits {fruits} reverse />
+	<Fruits {fruits} slice="0, 3" />
+
+	<Parent />
 </main>
+
 
 <style>
 	main {
