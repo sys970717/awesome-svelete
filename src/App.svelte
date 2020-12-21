@@ -1,6 +1,11 @@
 <script>
+	import Header from './components/Layout/Main/Header.svelte';
 	export let name;
 </script>
+
+<header>
+	<Header />
+</header>
 
 <main>
 	<h1>Hello {name}!</h1>
@@ -17,7 +22,7 @@
 
 	h1 {
 		color: #ff3e00;
-		text-transform: uppercase;
+	 	text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
 	}
